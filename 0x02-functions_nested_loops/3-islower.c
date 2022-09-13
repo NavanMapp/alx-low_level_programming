@@ -2,7 +2,7 @@
 
 /**
 * _islower - tests whether a character is a
-* @c: parameter or member
+* @ c: parameter or member
 * Return: 1 if lowercase and 0 if not lowercase
 */
 
