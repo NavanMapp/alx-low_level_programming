@@ -7,8 +7,9 @@
  * Return: on success 1
  * On error, -1 is returned, and errno is set appropriately,
  * */
-int _putchar(char c)
+include "main.h"
+int main(void)
 {
-printf("%f/n);
+_putchar('\n');
 return 0;
 }
