@@ -5,7 +5,7 @@
 * Return: 0, 1 and -1 will be returned
 */
 
-int print_sign(int n);
+int print_sign(int n)
 {
 if (n > 0)
 return (1);
