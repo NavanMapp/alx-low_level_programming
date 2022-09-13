@@ -2,6 +2,7 @@
 
 /**
 * print_sign: function that prints a sign of a number
+* @n: is the int that will use the argument of the function
 * Return: 0, 1 and -1 will be returned
 */
 
