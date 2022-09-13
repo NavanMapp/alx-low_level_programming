@@ -1,12 +1,10 @@
 #include "main.h"
 
 /**
-*
-* _abs: calculate the absolute value
+* _abs - calculate the absolute value
 * @i: the integer to be converted
 * Return: absolute value
 */
-
 int _abs(int i)
 {
 if (i < 0)
