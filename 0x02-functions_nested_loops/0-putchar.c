@@ -5,11 +5,11 @@
 */
 int main(void)
 {
-char *sh = "main";
-while (*sh)
+char putchar[] = "_putchar";
+while (putchar)
 {
-_putchar(*sh);
-sh++;
+_putchar(putchar[]);
+putchar[]++;
 }
 _putchar('\n')
 return (0);
