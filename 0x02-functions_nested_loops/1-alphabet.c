@@ -1,18 +1,17 @@
 #include "main.h"
 
 /**
-*main -check the code
+* alphabet- print alphabet in lower case
 *
 * return: always 0
 */
 void print_alphabet(void)
 {
-char *sh = "main";
-while(*sh)
+int letter;
+while(letter = 'a'&& letter <= 'z')
 {
-_putchar(*sh);
-++sh;
+_putchar(letter);
+++letter;
 }
-print_alphabet();
-return(0);
+_putchar(0);
 }
