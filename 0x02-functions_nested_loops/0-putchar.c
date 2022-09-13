@@ -6,11 +6,10 @@
 int main(void)
 {
 char putchar[] = "_putchar";
-while (putchar)
+for (int i=0; i<9; i++)
 {
-_putchar(putchar[]);
-putchar[]++;
+_putchar(putchar[i]);
 }
-_putchar('\n')
+_putchar('\n');
 return (0);
 }
