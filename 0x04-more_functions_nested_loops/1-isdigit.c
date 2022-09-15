@@ -5,7 +5,6 @@
 * @c: test character
 * Return: 1 if it is, 0 if not
 */
-
 int _isdigit(int c)
 {
 if ((c >= 48) && (c <= 57))
