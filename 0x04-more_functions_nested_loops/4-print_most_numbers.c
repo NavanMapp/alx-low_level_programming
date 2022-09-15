@@ -1,6 +1,6 @@
 #include "main.h"
 
-/*
+/**
 * print_most_numbers - checks for digits 0 to 9
 * Return: 0
 */
