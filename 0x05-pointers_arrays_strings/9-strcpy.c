@@ -6,13 +6,14 @@
 * @src: source
 * Return: string
 */
-
-char *_strcpy(char *dest, *src)
+char *_strcpy(char *dest, char *src)
 {
-int = i;
-for (i = 0; src[i] != '\0'; i++)
+int inc = 0;
+while (*(src + inc) != '\0')
 {
-dest[i] = src[i];
+*(dest + inc) = *(src + inc);
+inc++;
 }
+*(dest + inc) = '\0';
 return (dest);
 }
