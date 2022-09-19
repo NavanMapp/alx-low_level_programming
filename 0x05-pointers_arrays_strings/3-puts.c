@@ -3,15 +3,17 @@
 /**
 * _puts - prints string
 * @str: string input
-* Return: string
+* Description: prints a string
+* On success: returns no error
 */
 
 void _puts(char *str)
 {
-int i;
-for (i = 0; str[i] != '\0'; i++)
+int i = 0;
+while (*(str[i]) != '\0')
 {
-_putchar(str[i]);
+_putchar(*(str + i));
+i++
 }
-_putchar('\n');
+_putchar(10);
 }
