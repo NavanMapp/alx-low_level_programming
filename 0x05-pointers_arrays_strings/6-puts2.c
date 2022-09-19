@@ -1,22 +1,19 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
-* puts2 - print one out of two characters
-* @str: input
-* Return: output
+* puts2 - prints every other character
+* @str: string
+* Return: nothing
 */
-
 void puts2(char *str)
 {
-int i =0;
-for (i = 0; str[i] != '\0'; i++)
+int i = 0;
+while (*(str + i) != '\0')
 {
-if ((i % 2) == 0)
-{
-_putchar(str[i]);
+if (i % 2 == 0)
+putchar(*(str + i));
+i++;
 }
-else
-continue;
-}
-_putchar('\n');
+putchar(10);
 }
