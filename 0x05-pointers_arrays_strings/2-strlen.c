@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
 * _strlen - function that returns string length
@@ -7,7 +6,7 @@
 * Return: string length
 */
 
-void _strlen(char *s)
+int _strlen(char *s)
 {
 int i = 1, len = 0;
 char str = s[0];
