@@ -7,14 +7,17 @@
 * Return: print number
 */
 
+#include <stdio.h>
+
 void print_number(int n){
-     int r;
-     if (n == 0){
-          return;
-     }
-     r = n % 10;
 
-     print_number(n / 10);
-     printf("%i\n", r);
+     if (n < 0){
+         _putchar ('-');
+         n = -n;
+      }
 
+     if (n / 10)
+	     print_number(n / 10);
+
+     _putchar(n % 10);
 }
