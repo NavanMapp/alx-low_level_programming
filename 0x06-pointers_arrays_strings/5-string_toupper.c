@@ -5,15 +5,13 @@
 * Return: uppercase characters
 */
 
-char *string_toupper(char *){
-char c;
-int i = 0;
-while (c[i]){
-	if (c[i] >= 97 && c[i] <= 122){
-		c[i] -= 32;
-	}
-	c++;
-}
+char *string_toupper(char *s){
+    int i;
 
-return (c);
+    for (i = 0; s[i] != '\0'; i++){
+        if ((s[i] >= 'a') && (s[i] <= 'z')){
+            s[i] -= 32;
+        }
+    }
+    return s;
 }
