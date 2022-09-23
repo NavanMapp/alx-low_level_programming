@@ -16,9 +16,7 @@ void reverse_array(int *a, int n){
         a[end] = t;    
         end--;
     }
-    
-    printf("Reverse array is\n");
-    
+
     for (c = 0; c < n; c++)
         printf("%d\n", a[c]);
 }
