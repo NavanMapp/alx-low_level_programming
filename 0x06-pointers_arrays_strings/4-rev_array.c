@@ -6,17 +6,17 @@
  *@n: elements in an array
  * Return: reversed array
  */
-oid reverse_array(int *a, int n){
-     int i = 1, j, k, *p;
-     p = a;
+void reverse_array(int *a, int n){
+    int c = 0, d, b, t;
+    int end = n - 1;
     
-     while (i < n){
-         p++;
-     }
-     for (j = 0; j < i; j++){
-         k = a[j];
-         a[j] = *p;
-         *p = k;
-         p--;
-     }
- }
+    for (c = 0; c < n/2; c++) {
+        t = a[c];
+        a[c] = a[end];
+        a[end] = t;    
+        end--;
+    }
+
+    for (c = 0; c < n; c++)
+        printf("%d\n", a[c]);
+}
