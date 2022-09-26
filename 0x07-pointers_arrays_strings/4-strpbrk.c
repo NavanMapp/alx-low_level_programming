@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
-* strpbrk - searches for any set of bytes
+* _strpbrk - searches for any set of bytes
 * @s: pointer that contains the address of the string to be evaluated
 * @accept: pointer that contains a string
-* Return: address of the first occurrence of accept in the string
+* Return: address of the first occurrence
 */
 
 char *_strpbrk(char *s, char *accept)
