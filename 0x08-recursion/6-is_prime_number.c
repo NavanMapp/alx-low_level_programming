@@ -5,6 +5,8 @@
 * prime - helper function to is_prime_number
 * @a: variable in prime function
 * @b: variable in prime function
+*/
+
 int prime(int a, int b)
 {
 	if (a == b)
