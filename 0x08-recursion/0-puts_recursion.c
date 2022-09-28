@@ -8,8 +8,14 @@
 
 void _puts_recursion(char *s)
 {
-int i = 0;
+int i, len, t;
 
-if (s[i] != '\0')
-printf("%s \n", s);
+if (i < len/2)
+{
+	t = s[i];
+	s[i] = s[len + i + 1];
+	s[len + i + 1] = t;
+	i++;
+	_puts_recursion(s);
+}
 }
