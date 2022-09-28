@@ -10,12 +10,11 @@ void _puts_recursion(char *s)
 {
 int i, len, t;
 
-if (i < len/2)
+if (*s)
 {
-	t = s[i];
-	s[i] = s[len + i + 1];
-	s[len + i + 1] = t;
-	i++;
-	_puts_recursion(s);
+	_putchar("\n");
+	return;
 }
+	_puts_recursion(s);
+	_puts_recursion(s + 1);
 }
