@@ -5,6 +5,7 @@
 * prime - helper function to is_prime_number
 * @a: variable in prime function
 * @b: variable in prime function
+* Return: 0
 */
 
 int prime(int a, int b)
