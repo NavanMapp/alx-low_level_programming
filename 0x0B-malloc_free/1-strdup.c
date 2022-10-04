@@ -20,4 +20,5 @@ char *_strdup(char *str)
 	s = (char *) malloc(i + 1);
 	strcpy(s, str);
 	return (s);
+	free(s);
 }
