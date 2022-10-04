@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 /**
-* main - program that prints its name
-* @argc: argument count
-* @argv: argument vector
-* Return: name of the program
-*/
+  * main - prints its ownn name
+  * @argv: argument variable
+  * @argc: argument count
+  * Return: name
+  */
 
 int main(int argc, char *argv[])
 {
