@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 		b = 0;
 		for (a = 1; a < argc; a++)
 		{
-			b += atoi(argv[i]);
+			b += atoi(argv[a]);
 		}
 		printf("%d\n", b);
 	}
