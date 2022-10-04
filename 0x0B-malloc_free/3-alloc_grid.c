@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
-  * alloc_grid - two dimensional array
-  * @width: variable
-  * @height: variable
-  * Return: NULL
-  */
+* alloc_grid - two dimensional array
+* @width: variable
+* @height: variable
+* Return: NULL
+*/
 
 int **alloc_grid(int width, int height)
 {
@@ -25,11 +25,12 @@ int **alloc_grid(int width, int height)
 	for (i = 0; i < height; i++)
 	{
 		p[i] = (int *) malloc(sizeof(int) * width);
+
 		if (p[i] != NULL)
-			{
-				for (j = 0; j < width; j++)
-					p[i][j] = 0;
-			}
+		{
+			for (j = 0; j < width; j++)
+				p[i][j] = 0;
+		}
 		else
 		{
 			while (i >= 0)
