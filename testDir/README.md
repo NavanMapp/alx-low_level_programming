@@ -1,0 +1,1 @@
+This is a test of cloning a repository on my local machine
