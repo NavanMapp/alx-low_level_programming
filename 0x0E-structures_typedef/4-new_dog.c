@@ -10,10 +10,17 @@
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	if (!name && !age && !owner)
+	struct dog_t *new_dog;
+
+	new_dog = maloc(sizeof(struct dog_t));
+	if (!new_dog)
 	{
 		return (NULL);
 	}
 	else
 	{
-
+		new_dog->name = name;
+		new_dog->age = age;
+		new_dog->owner = owner;
+	}
+}
