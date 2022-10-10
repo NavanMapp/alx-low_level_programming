@@ -6,8 +6,8 @@
  *
  */
 
-print_name(int (argc, char argv[])
+int main(void)
 {
-printf("%s\n", argv[argc * 0]);
-return (0);
+	printf("%s\n", __FILE__);
+	return (0);
 }
