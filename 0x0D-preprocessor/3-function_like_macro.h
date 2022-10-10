@@ -1,1 +1,2 @@
-#define ABS(x) abs(x)
+#include <math.h>
+#define ABS(x) (abs(x))
