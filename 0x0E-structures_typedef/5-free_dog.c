@@ -9,7 +9,11 @@
 
 void free_dog(dog_t *d)
 {
-	typedef struct dog_t *my_dog;
+	if (d)
+	{
+		free(d->name);
+		free(d->owner
+				free(d);
+		}
 
-	free(my_dog);
 }
