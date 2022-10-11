@@ -4,7 +4,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "dog.h"
 /**
  * dog - struct definition
  * dog_t - struct variable
