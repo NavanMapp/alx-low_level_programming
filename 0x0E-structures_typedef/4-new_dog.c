@@ -1,4 +1,3 @@
-#include "main.h"
 #include "dog.h"
 
 /**
@@ -8,21 +7,15 @@
  * @owner: variable
  * Return: 0
  */
-
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	struct dog_t *new_dog;
-
-	new_dog = malloc(sizeof(struct dog_t));
-	if (!new_dog)
-	{
+	struct dog_t *_dog;
+	
+	_dog = malloc(sizeof(dog_t));
+	if (_dog == NULL)
 		return (NULL);
-	}
-	else
-	{
-		new_dog->name = name;
-		new_dog->age = age;
-		new_dog->owner = owner;
-	}
-	free(new_dog);
+	_dog->name = name;
+	_dog->age = age;
+	_dog->owner = owner;
+	return (_dog);
 }
