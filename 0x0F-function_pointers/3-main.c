@@ -8,6 +8,7 @@
  */
 int main(int argc, char *argv[])
 {
+    
     int one, two, ans;
     int (*func)(int, int);
     char o;
@@ -16,7 +17,7 @@ int main(int argc, char *argv[])
     {
         printf("Error\n);
                exit(98);
-               }
+     }
 
     one = atoi(argv[1]);
     two = atoi(argv[3]);
