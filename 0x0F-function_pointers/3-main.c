@@ -6,37 +6,39 @@
  * @argv: argument vector
  * Return: NULL
  */
-
 int main(int argc, char *argv[])
 {
+    
     int one, two, ans;
-    int (*res)(int, int);
-    char *get_op;
-
+    int (*func)(int, int);
+    char o;
+    
     if (argc != 4)
     {
-        print("Error\n);
-        exit(98);
-    }
+        printf("Error\n);
+               exit(98);
+     }
 
     one = atoi(argv[1]);
     two = atoi(argv[3]);
-    get_op = argv[2];
+               
+    func = get_op_func(argv[2]);
 
-    if (get_op_func(argv[2]) == NULL || argv[2][1] != '\0')
+    if (!func)
     {
         printf("Error\n");
         exit(99);
     }
-    else if ((*get_op == '/' || *get_op == '%') && (*argv[3] == '\0'))
+    
+    o = *argv[2];
+
+    if ((o == '/' || o == '%') && two == 0)
     {
         printf("Error\n");
         exit(100);
     }
-    else
-        res = get_op_func(get_op);
-    ans = res(one, two);
-
+    ans = func(one, two);
+               
     printf("%d\n", ans);
     return (0);
 }

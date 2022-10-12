@@ -1,5 +1,9 @@
 #include "3-calc.h"
-
+/**
+ * get_op_func - matches operator from main
+ * @s: op str
+ * Return: 0
+ */
 int (*get_op_func(char *s))(int, int)
 {
     op_t op_s[] = {
@@ -13,9 +17,9 @@ int (*get_op_func(char *s))(int, int)
 
     int i = 0;
 
-    while (op_s[i].op)
+    while (ops[i].op)
     {
-        if (*(op_s[i].op) == *s)
+        if (strcmp(ops[i].op, s) == 0)
             return (op_s[i].f);
         i++;
     }
