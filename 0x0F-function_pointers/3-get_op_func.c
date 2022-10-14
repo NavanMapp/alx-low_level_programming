@@ -1,3 +1,5 @@
+#include <stdlib.h>
+#include <stdio.h>
 #include "3-calc.h"
 /**
  * get_op_func - matches operator from main
@@ -6,22 +8,22 @@
  */
 int (*get_op_func(char *s))(int, int)
 {
-    op_t op_s[] = {
-        {"+", op_add},
-        {"-", op_sub},
-        {"*", op_mul},
-        {"/", op_div},
-        {"%", op_mod},
-        {NULL, NULL}
-    };
+	op_t op_s[] = {
+		{"+", op_add},
+		{"-", op_sub},
+		{"*", op_mul},
+		{"/", op_div},
+		{"%", op_mod},
+		{NULL, NULL}
+	};
 
-    int i = 0;
+	int i = 0;
 
-    while (ops[i].op)
-    {
-        if (strcmp(ops[i].op, s) == 0)
-            return (op_s[i].f);
-        i++;
-    }
-    return (NULL);
+	while (op_s[i].op)
+	{
+		if (*(op_s[i].op) == *s)
+			return (op_s[i].f);
+		i++;
+	}
+	return (NULL);
 }
