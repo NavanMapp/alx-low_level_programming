@@ -10,7 +10,7 @@
 
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-    char* sep;
+    char *sep;
     unsigned int i;
     va_list ap;
 
@@ -18,6 +18,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
         return;
     else
         sep = (char *) separator;
+
     va_start(ap, n);
 
     if (n > 0)
