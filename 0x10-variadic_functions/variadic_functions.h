@@ -2,7 +2,7 @@
 #define VARIADIC
 
 #inlcude <stdio.h>
-#include <stdlib.h>
+#include <stdarg.h>
 
 /** prototypes */
 int _putchar(char c);
