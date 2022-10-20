@@ -1,4 +1,4 @@
-#include "main.h"
+#include "list.h"
 
 /**
  * strdup - function to duplicate string
