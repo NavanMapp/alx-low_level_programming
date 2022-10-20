@@ -6,23 +6,16 @@
  * Return: 0
  */
 
- void free_list(list_t *head)
- {
-     list_t *n, *next;
+void free_list(list_t *head)
+{
+	list_t *temp;
 
-     if (head)
-     {
-         n = head;
-         next = head->next;
-
-         while (next)
-         {
-             free(n->str);
-             free(n);
-             n = next;
-             n = n->next;
-         }
-         free(n->str);
-         free(n);
-     }
- }
+	while (head)
+	{
+		temp = head;
+		head = head->next;
+		free(temp->str);
+		free(temp);
+	}
+	free(head);
+}
