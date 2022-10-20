@@ -1,4 +1,5 @@
 #include "list.h"
+#include <stdio.h>
 
 /**
  * print_list - struct that prints a list of elements
