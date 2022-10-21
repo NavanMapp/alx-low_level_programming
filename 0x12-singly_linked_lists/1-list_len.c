@@ -1,5 +1,4 @@
-#include "list.h"
-#include <stdio.h>
+#include "lists.h"
 
 /**
  * list_len - return elements in a linked list
