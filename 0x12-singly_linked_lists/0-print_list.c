@@ -1,20 +1,24 @@
-#include "lists.h"
+#include "list.h"
 
 /**
- * list_len - return elements in a linked list
- * @h: variable
- *
- * Return: 0
- */
+  * print_list - struct that prints a lists of elemets
+  * @h: variable
+  *Return: 0
+  */
 
-size_t list_len(const list_t *h)
+size_t print_list(const list_t *h)
 {
- size_t i = 0;
+	size_t i = 0;
 
- while (h)
- {
-  h = h->next;
-  i++;
- }
- return (i);
+	while (h)
+	{
+		if (h->str == NULL)
+		{
+			printf("[0] (nil)\n");
+		}
+		printf("[d] %s\n", h->len, h->str);
+		i++;
+		h = h->next;
+	}
+	return (i);
 }
