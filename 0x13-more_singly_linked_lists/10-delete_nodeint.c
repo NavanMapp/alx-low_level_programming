@@ -33,15 +33,18 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 			return (1);
 		}
 		
- for (n = 0; n < (index - 1); n++;)
-    {
-        if (copy-next == NULL)
-            return (-1);
-		n++;
-        copy = copy->next;
-    }
-		temp = temp->next;
-		count++;
+		while (temp)
+		{
+			if (count == index)
+			{
+				new = temp->next;
+				temp->next = new->next;
+				free(new);
+				return (1);
+			}
+			temp = temp->next;
+			count++;
+		}
+		return (-1);
 	}
-	return (-1);
 }
