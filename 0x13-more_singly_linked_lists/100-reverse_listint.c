@@ -9,19 +9,19 @@
 
 istint_t *reverse_listint(listint_t **head)
 {
-    listint_t *p, *next;
+    listint_t *prev = NULL, *next = NULL;
 
-    if (head)
-    {
-        while (*head)
-        {
-            next = *head;
-            *head = (*head)->next;
-            next->next = p;
-            p = next;
-        }
-        *head = p;
-        return (*head);
-    }
-    return (NULL);
+	if (head)
+	{
+		while (*head)
+		{
+			next = *head;
+			*head = (*head)->next;
+			next->next = prev;
+			prev = next;
+		}
+		*head = prev;
+		return (*head);
+	}
+	return (NULL);
 }
