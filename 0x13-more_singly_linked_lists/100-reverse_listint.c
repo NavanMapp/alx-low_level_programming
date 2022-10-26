@@ -9,7 +9,7 @@
 
 istint_t *reverse_listint(listint_t **head)
 {
-    listint_t *p, *n;
+    listint_t *p, *next;
 
     if (head)
     {
@@ -17,8 +17,8 @@ istint_t *reverse_listint(listint_t **head)
         {
             next = *head;
             *head = (*head)->next;
-            next->n = p;
-            p = n;
+            next->next = p;
+            p = next;
         }
         *head = p;
         return (*head);
