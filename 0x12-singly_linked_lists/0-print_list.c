@@ -1,4 +1,4 @@
-#include "list.h"
+#include "lists.h"
 
 /**
   * print_list - struct that prints a lists of elemets
