@@ -9,14 +9,13 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t nbytes;
-	char *buffer;
+	FILE *fp = fopen(filename, "w");
 
-	if (filename == NULL)
+	if (!fp && !filename)
 		return (0);
 
-	while ((nbytes = read(buffer, sizeof(char), sizeof(buffer), filename)) != 0)
-		write(buffer, sizeof(char), nbytes, stdout);
+	fwrite(filename, sizeof(char), letters, fp);
 
-	return (nbytes);
+	fclose(fp);
+	return (letters);
 }
