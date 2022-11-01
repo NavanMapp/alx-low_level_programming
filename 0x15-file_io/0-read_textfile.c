@@ -15,8 +15,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (text == NULL && filename == NULL)
 		return (0);
 	
-	while ((nbytes = fread(buffer, sizeof(char), sizeof(buffer), fp)) != 0)
-		fwrite(buffer, sizeof(char), nbytes, stdout);
+	while ((nbytes = read(buffer, sizeof(char), sizeof(buffer), filename)) != 0)
+		write(buffer, sizeof(char), nbytes, stdout);
 	
 	return (nbytes);
 }
