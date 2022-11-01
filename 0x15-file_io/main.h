@@ -2,7 +2,10 @@
 #define MAIN_H
 
 #include <stdio.h>
-#include <stdlib.h>
+#include <stlib.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fnctl.h>
 
 /** prototypes */
 
