@@ -19,7 +19,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (filename == NULL)
 		return (0);
 
-	file = fopen(filename, O_RDONLY);
+	file = open(filename, O_RDONLY);
 
 	if (file == -1)
 	{
@@ -27,7 +27,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
-	let = fread(file, text, letters);
+	let = read(file, text, letters);
 
 	w = write(STDOUT_FILENO, text, let);
 
