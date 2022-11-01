@@ -4,18 +4,19 @@
   * read_textfile - function that reads a text file and prints it
   * @filename: source file
   * @letters: Number of letters to read and print
-  * @Return: content
+  * @Return: 0
   */
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
+	ssize_t wr;
 	FILE *fp = fopen(filename, "w");
 
 	if (!fp && !filename)
 		return (0);
 
-	fwrite(filename, sizeof(char), letters, fp);
+	wr = fwrite(filename, sizeof(char), letters, fp);
 
 	fclose(fp);
-	return (letters);
+	return (wr);
 }
