@@ -9,27 +9,14 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t file, let, w;
-	char *text;
+	ssize_t nbytes;
+	char *buffer;
 
-	text = malloc(sizeof(letters));
-	
 	if (text == NULL && filename == NULL)
 		return (0);
-
-	file = open(filename, O_RDONLY);
-
-	if (file == -1)
-	{
-		free(text);
-		return (0);
-	}
-
-	let = read(file, text, letters);
-
-	w = write(STDOUT_FILENO, text, let);
-
-	close(file);
-
-	return (w);
+	
+	while ((nbytes = fread(buffer, sizeof(char), sizeof(buffer), fp)) != 0)
+		fwrite(buffer, sizeof(char), nbytes, stdout);
+	
+	return (nbytes);
 }
