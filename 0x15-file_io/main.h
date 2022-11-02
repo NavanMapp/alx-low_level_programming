@@ -5,12 +5,8 @@
 #include <stdlib.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-<<<<<<< HEAD
 #include <fcntl.h>
 #include <unistd.h>
-=======
-#incude <fcntl.h>
->>>>>>> c27115ce22585991460c8084514aaf7aeadd8925
 
 /** prototypes */
 
