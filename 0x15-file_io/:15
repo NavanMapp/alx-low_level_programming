@@ -9,21 +9,14 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	FILE *fp;
-	char *ch;
-
-	ch = malloc(sizeof(char));
-	fp = fopen(filename, "r");
+	ssize_t wr;
+	FILE *fp = fopen(filename, "r");
 
 	if (!fp && !filename)
 		return (0);
 
-	while (!feof(fp))
-	{
-		fgets(ch, letters, fp);
-		fputs(filename, fp);
-	}
+	wr = fwrite(filename, sizeof(char), letters, fp);
 
 	fclose(fp);
-	return (0);
+	return (wr);
 }
