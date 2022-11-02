@@ -11,19 +11,18 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	FILE *fp;
 	char *ch;
+	ssize_t r;
 
-	ch = malloc(sizeof(char));
+	ch = malloc(sizeof(char*) * letters);
 	fp = fopen(filename, "r");
 
 	if (!fp && !filename)
 		return (0);
 
-	while (!feof(fp))
-	{
-		fgets(ch, letters, fp);
-		fputs(filename, fp);
-	}
+	r = fread(ch, sizeof(char), letters, fp);
+	fwrite(ch, sizeof(char), letters, fp);	
 
+	free(ch);
 	fclose(fp);
-	return (0);
+	return (r);
 }
